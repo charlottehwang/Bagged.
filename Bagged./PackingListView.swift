@@ -6,6 +6,13 @@
 //
 
 import SwiftUI
+
+struct PackingListView: View {
+    var body: some View {
+        //Text("This is the quiz view!")
+    }
+}
+
 struct ChecklistItem: Identifiable {
     let id = UUID()
     var title: String
