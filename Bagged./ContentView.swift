@@ -12,14 +12,14 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 Text("This is the root view")
-                NavigationLink(destination: SecondView()) {
-                    Text("Click me!")
+                NavigationLink(destination: QuizView()) {
+                    Text("Quiz")
                 }
-                NavigationLink(destination: ThirdView()) {
-                    Text("About")
+                NavigationLink(destination: PackingListView()) {
+                    Text("Packing List")
                 }
-                NavigationLink(destination: FourthView()) {
-                    Text("Connect")
+                NavigationLink(destination: AboutMeView()) {
+                    Text("About Me")
                 }
                
 

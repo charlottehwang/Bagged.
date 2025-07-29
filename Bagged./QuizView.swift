@@ -1,15 +1,15 @@
 //
-//  QuizView.swift
-//  Bagged.
+//  SecondView.swift
+//  navigation
 //
-//  Created by Charlotte Hwang on 7/29/25.
+//  Created by Aanya Jain on 7/24/25.
 //
 
 import SwiftUI
 
 struct QuizView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("This is the quiz view!")
     }
 }
 
