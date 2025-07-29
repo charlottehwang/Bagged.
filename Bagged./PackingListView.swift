@@ -45,7 +45,7 @@ struct PackingListView: View {
                     }
                 }
             }
-            .navigationTitle("Checklist")
+            .navigationTitle("Packing List")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: addItem) {
