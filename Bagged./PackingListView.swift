@@ -7,25 +7,22 @@
 
 import SwiftUI
 
-struct PackingListView: View {
-    var body: some View {
-        //Text("This is the quiz view!")
-    }
-}
 
 struct ChecklistItem: Identifiable {
     let id = UUID()
     var title: String
     var isChecked: Bool
+    var sectionTitle: String
 }
 
 import SwiftUI
 
 struct PackingListView: View {
     @State private var items: [ChecklistItem] = [
-        ChecklistItem(title: "Sunglasses", isChecked: false),
-        ChecklistItem(title: "Sunscreen", isChecked: false),
-        ChecklistItem(title: "Beach towel", isChecked: false)
+        ChecklistItem(title: "Sunglasses", isChecked: false, sectionTitle: "Beach"),
+        ChecklistItem(title: "Sunscreen", isChecked: false, sectionTitle: "Beach"),
+        ChecklistItem(title: "Beach towel", isChecked: false, sectionTitle: "Beach"),
+        ChecklistItem(title: "Water bottle", isChecked: false, sectionTitle: "Beach")
     ]
     
     var body: some View {
@@ -33,7 +30,7 @@ struct PackingListView: View {
             List {
                 ForEach(items.indices, id: \.self) { index in
                     HStack {
-                        Image(systemName: items[index].isChecked ? "checkmark.square.fill" : "square")
+                        Image(systemName: items[index].isChecked ? "checkmark.square.fill" : "circle")
                             .onTapGesture {
                                 items[index].isChecked.toggle()
                             }
