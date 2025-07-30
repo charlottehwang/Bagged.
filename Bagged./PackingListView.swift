@@ -29,7 +29,10 @@ struct PackingListView: View {
     }
     
     var body: some View {
-        NavigationView {
+        ZStack{
+        Color(.systemYellow)
+            .ignoresSafeArea()
+        NavigationStack {
             List {
                 ForEach(groupedItems.keys.sorted(), id: \.self) { section in
                     Section(header: Text(section)) {
@@ -43,8 +46,10 @@ struct PackingListView: View {
                             }
                         }
                     }
+                    
                 }
             }
+            
             .navigationTitle("Packing List")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -55,6 +60,8 @@ struct PackingListView: View {
             }
         }
     }
+}
+    
     
     func toggleCheck(for item: ChecklistItem) {
         if let index = items.firstIndex(where: { $0.id == item.id }) {
