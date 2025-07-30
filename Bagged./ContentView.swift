@@ -4,57 +4,87 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                // Background Gradient
+                // Smooth Gradient Background
                 LinearGradient(
-                    gradient: Gradient(colors: [Color.orange.opacity(0.7), Color.blue.opacity(0.8)]),
+                    gradient: Gradient(colors: [Color.orange.opacity(0.8), Color.pink.opacity(0.7), Color.blue.opacity(0.9)]),
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
                 )
                 .ignoresSafeArea()
 
-                VStack(spacing: 30) {
-                    // Title
-                    Text("Know where you wanna go but don't know what to bring?\nUse **Bagged.**\nPack like a pro! Plan like a boss and never forget your socks again!")
-                        .multilineTextAlignment(.center)
-                        .font(.title2)
-                        .fontWeight(.semibold)
-                        .foregroundColor(.white)
-                        .padding()
-
-                    // Navigation Buttons
-                    NavigationLink(destination: QuizView()) {
-                        CustomButton(label: "Take the Quiz")
+                VStack(spacing: 25) {
+                    // App Title / Tagline
+                    VStack(spacing: 10) {
+                        Text("Bagged.")
+                            .font(.system(size: 42, weight: .heavy, design: .rounded))
+                            .foregroundColor(.white)
+                        
+                        Text("Know where you wanna go but don't know what to bring?")
+                            .font(.title3)
+                            .fontWeight(.medium)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.white)
+                            .padding(.horizontal)
+                        
+                        Text("Pack like a pro. Plan like a boss. Never forget your socks again!")
+                            .fontWeight(.medium)
+                            .foregroundColor(.white.opacity(0.9))
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal)
                     }
+                    .padding(.top, 50)
 
-                    NavigationLink(destination: PackingListView()) {
-                        CustomButton(label: "View Packing List")
-                    }
+                    // Buttons with Icons
+                    VStack(spacing: 18) {
+                        NavigationLink(destination: QuizView()) {
+                            CustomButton(label: "Take the Quiz", icon: "questionmark.circle.fill")
+                        }
 
-                    NavigationLink(destination: AboutMeView()) {
-                        CustomButton(label: "About the Creators")
+                        NavigationLink(destination: PackingListView()) {
+                            CustomButton(label: "Saved Packing List", icon: "list.bullet.rectangle.fill")
+                        }
+
+                        NavigationLink(destination: AboutMeView()) {
+                            CustomButton(label: "About the Creators", icon: "person.3.fill")
+                        }
                     }
+                    .padding(.top, 30)
+
+                    Spacer()
                 }
-                .padding()
+                .padding(.horizontal, 20)
             }
             .navigationBarHidden(true)
         }
     }
 }
 
-//Button Style
+// Enhanced Button Style with Icons
 struct CustomButton: View {
     var label: String
+    var icon: String
 
     var body: some View {
-        Text(label)
-            .fontWeight(.bold)
-            .foregroundColor(.white)
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Color.black.opacity(0.8))
-            .cornerRadius(15)
-            .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
-            .padding(.horizontal, 30)
+        HStack {
+            Image(systemName: icon)
+                .foregroundColor(.white)
+            Text(label)
+                .foregroundColor(.white)
+                .font(.headline)
+                .fontWeight(.semibold)
+        }
+        .padding()
+        .frame(maxWidth: .infinity)
+        .background(
+            LinearGradient(
+                gradient: Gradient(colors: [Color.black.opacity(0.85), Color.gray.opacity(0.8)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+        )
+        .cornerRadius(15)
+        .shadow(color: .black.opacity(0.3), radius: 6, x: 0, y: 5)
+        .padding(.horizontal, 15)
     }
 }
 
