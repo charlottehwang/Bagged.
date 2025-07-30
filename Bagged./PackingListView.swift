@@ -56,7 +56,7 @@ struct PackingListView: View {
     
     var body: some View {
        
-            NavigationStack {
+        
                 ZStack {
                     
                 ScrollView{
@@ -84,11 +84,11 @@ struct PackingListView: View {
                     
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
-                    .navigationTitle("Packing List")
+                    .navigationTitle("Hawaii Packing List")
                     
                 }
             }
-        }
+        
     }
 
     func toggleCheck(for item: ChecklistItem) {
