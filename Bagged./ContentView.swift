@@ -26,7 +26,7 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .padding(.horizontal)
                         
-                        Text("Pack like a pro. Plan like a boss. Never forget your socks again!")
+                        Text("Pack like a pro. Plan like a boss.")
                             .fontWeight(.medium)
                             .foregroundColor(.white.opacity(0.9))
                             .multilineTextAlignment(.center)
@@ -51,6 +51,13 @@ struct ContentView: View {
                     .padding(.top, 30)
 
                     Spacer()
+
+                    // Bottom Image
+                    Image("Bagged")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 250)
+                        .padding(.bottom, 20)
                 }
                 .padding(.horizontal, 20)
             }
