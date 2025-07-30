@@ -16,7 +16,7 @@ struct ExtraChecklistItem: Identifiable {
 
 let extraPackingData: [String: [String]] = [
     "Essentials ✈️": [
-        "Travel documents", "Wallet", "Phone + charger", "Travel insurance info",
+        "Travel documents", "Wallet", "Travel insurance info",
         "Reusable water bottle", "Snacks for the flight"
     ],
     "Clothing 👕": [
