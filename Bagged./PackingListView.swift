@@ -29,52 +29,55 @@ struct PackingListView: View {
     }
     
     var body: some View {
-        ZStack{
-        Color(.systemYellow)
-            .ignoresSafeArea()
+        
         NavigationStack {
-            List {
-                ForEach(groupedItems.keys.sorted(), id: \.self) { section in
-                    Section(header: Text(section)) {
-                        ForEach(groupedItems[section]!) { item in
-                            HStack {
-                                Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
-                                    .onTapGesture {
-                                        toggleCheck(for: item)
-                                    }
-                                Text(item.title)
+            ScrollView{
+                VStack(alignment: .leading, spacing: 20) {
+                    ForEach(groupedItems.keys.sorted(), id: \.self) { section in
+                        VStack(alignment: .leading, spacing: 10) {
+                            Text(section)
+                                .font(.headline)
+                                .padding(.bottom, 5)
+                            ForEach(groupedItems[section]!) { item in
+                                HStack {
+                                    Image(systemName: item.isChecked ? "checkmark.circle.fill" : "circle")
+                                        .onTapGesture {
+                                            toggleCheck(for: item)
+                                        }
+                                    Text(item.title)
+                                }
                             }
                         }
+                        .padding(.horizontal)
                     }
-                    
+                    Spacer() // Fills remaining space
                 }
-            }
-            
-            .navigationTitle("Packing List")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: addItem) {
-                        Image(systemName: "plus")
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.horizontal)
+                .navigationTitle("Packing List")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: addItem) {
+                            Image(systemName: "plus")
+                        }
                     }
                 }
             }
         }
     }
-}
-    
-    
+
     func toggleCheck(for item: ChecklistItem) {
         if let index = items.firstIndex(where: { $0.id == item.id }) {
             items[index].isChecked.toggle()
         }
     }
-    
+
     func addItem() {
         items.append(ChecklistItem(title: "New Item", isChecked: false, sectionTitle: "Misc"))
     }
 }
 
-
 #Preview {
     PackingListView()
 }
+
