@@ -58,8 +58,14 @@ struct QuizView: View {
                 }
                 .padding()
                 .navigationDestination(for: String.self) { destination in
-                    NextQuestionView(destination: destination)
+                    if destination == "Hawaii" {
+                        PackingListView()
+
+                    } else {
+                        NextQuestionView(destination: destination)
+                    }
                 }
+
             }
             .navigationTitle("Take the Quiz")
             .toolbar {
@@ -69,6 +75,8 @@ struct QuizView: View {
             
         }
     }
+    
+    
     
     struct NextQuestionView: View {
         let destination: String
@@ -96,7 +104,6 @@ struct QuizView: View {
     }
 }
 
-  
 #Preview {
     QuizView()
 }
