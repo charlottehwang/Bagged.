@@ -17,26 +17,25 @@ struct ExtraChecklistItem: Identifiable {
 let extraPackingData: [String: [String]] = [
     "Essentials ✈️": [
         "Travel documents", "Wallet", "Phone + charger", "Travel insurance info",
-        "Reusable water bottle", "Snacks for the flight", "Sunglasses",
-        "Sunscreen (reef-safe)", "Lip balm with SPF"
+        "Reusable water bottle", "Snacks for the flight"
     ],
     "Clothing 👕": [
-        "Swimsuits", "Tank tops / t-shirts", "Shorts", "Pajamas", "Flip-flops or sandals", "Sneakers","Underwear", "Socks", "Light sweater or jacket", "Hat or visor"
+        "Long sleeve shirts", "Short sleeve shirts", "Thermal top & bottom", "Hiking pants", "Jeans / regular pants", "Wool socks"
     ],
     "Toiletries 🧼": [
         "Toothbrush", "Toothpaste", "Hairbrush or comb", "Shampoo & conditioner", "Body Wash","Deodorant", "Razor", "Moisturizer", "Bug spray", "Hair ties / clips"
     ],
-    "Beach 🏖️": [
-        "Beach towel or quick-dry towel", "Waterproof phone pouch", "Snorkel gear",
-        "Dry bag", "Beach bag or tote"
+    "Outerwear ": [
+        "Waterproof and windproof jacket", "Lightweight insulated jacket", "Waterproof rain pants", "Beanie or wool hat", "Waterproof and insulated gloves"
     ],
-    "Excursions 🥾": [
-        "Hiking shoes or sturdy sneakers", "Reusable daypack", "Water shoes",
-        "GoPro or waterproof camera"
+    "Adventure gear 🥾": [
+        "Daypack", "Reusable water bottle", "Swimsuit", "Extra bag for wet clothes", "Flashlight", "Headlamp", "Binoculars", "Protein bars & snacks"
     ],
-    "Nice to Have 📚": [
-        "Book or Kindle", "Travel journal", "Portable charger",
-        "Lightweight blanket or scarf", "Collapsible tote for souvenirs"
+    "Footwear": [
+        "Waterproof hiking boots", "Casual shoes / sneakers for city", "Sandals for hot springs / hotel"
+    ],
+    "Electronics": [
+        "Universal power adapter (Iceland uses Type F plug)", "Phone and charger", "Power bank", "Camera and SD Cards", "Waterproof phoen case (if visitng waterfalls or hot springs)"
     ]
 ]
 
