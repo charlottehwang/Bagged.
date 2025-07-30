@@ -7,13 +7,4 @@
 
 import SwiftUI
 
-struct AboutMeView: View {
-    var body: some View {
-        Image("Image")
-            .frame(width: 1, height: 4)
-    }
-}
 
-#Preview {
-    AboutMeView()
-}
