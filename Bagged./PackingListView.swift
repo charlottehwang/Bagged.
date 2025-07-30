@@ -24,7 +24,7 @@ let packingData: [String: [String]] = [
         "Swimsuits", "Tank tops / t-shirts", "Shorts", "Pajamas", "Flip-flops or sandals", "Sneakers","Underwear", "Socks", "Light sweater or jacket", "Hat or visor"
     ],
     "Toiletries": [
-        "Toothbrush", "Toothpaste", "Hairbrush or comb", "Shampoo & conditioner", "Body Wash", "Deodorant", "Razor", "Moisturizer", "Bug spray", "Hair ties / clips"
+        "Toothbrush", "Toothpaste", "Hairbrush or comb", "Shampoo & conditioner", "Body Wash","Deodorant", "Razor", "Moisturizer", "Bug spray", "Hair ties / clips"
     ],
     "Beach": [
         "Beach towel or quick-dry towel", "Waterproof phone pouch", "Snorkel gear",
