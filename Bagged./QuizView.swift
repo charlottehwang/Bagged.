@@ -68,8 +68,6 @@ struct QuizView: View {
         }
     }
     
-    
-    
     struct NextQuestionView: View {
         let destination: String
         
@@ -95,6 +93,7 @@ struct QuizView: View {
     }
 }
 
+  
 #Preview {
     QuizView()
 }

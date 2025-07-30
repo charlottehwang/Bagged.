@@ -15,30 +15,31 @@ struct ChecklistItem: Identifiable {
 }
 
 let packingData: [String: [String]] = [
-    "Essentials": [
+    "Essentials ✈️": [
         "Travel documents", "Wallet", "Phone + charger", "Travel insurance info",
         "Reusable water bottle", "Snacks for the flight", "Sunglasses",
         "Sunscreen (reef-safe)", "Lip balm with SPF"
     ],
-    "Clothing": [
+    "Clothing 👕": [
         "Swimsuits", "Tank tops / t-shirts", "Shorts", "Pajamas", "Flip-flops or sandals", "Sneakers","Underwear", "Socks", "Light sweater or jacket", "Hat or visor"
     ],
-    "Toiletries": [
+    "Toiletries 🧼": [
         "Toothbrush", "Toothpaste", "Hairbrush or comb", "Shampoo & conditioner", "Body Wash","Deodorant", "Razor", "Moisturizer", "Bug spray", "Hair ties / clips"
     ],
-    "Beach": [
+    "Beach 🏖️": [
         "Beach towel or quick-dry towel", "Waterproof phone pouch", "Snorkel gear",
         "Dry bag", "Beach bag or tote"
     ],
-    "Excursions": [
+    "Excursions 🥾": [
         "Hiking shoes or sturdy sneakers", "Reusable daypack", "Water shoes",
         "GoPro or waterproof camera"
     ],
-    "Nice to Have": [
+    "Nice to Have 📚": [
         "Book or Kindle", "Travel journal", "Portable charger",
         "Lightweight blanket or scarf", "Collapsible tote for souvenirs"
     ]
 ]
+
 
 struct PackingListView: View {
     
@@ -75,6 +76,7 @@ struct PackingListView: View {
                                     }
                                 }
                             }
+                            
                             .padding(.horizontal)
                         }
                         Spacer() // Fills remaining space
@@ -83,13 +85,7 @@ struct PackingListView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal)
                     .navigationTitle("Packing List")
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarTrailing) {
-                            Button(action: addItem) {
-                                Image(systemName: "plus")
-                            }
-                        }
-                    }
+                    
                 }
             }
         }
@@ -99,10 +95,6 @@ struct PackingListView: View {
         if let index = items.firstIndex(where: { $0.id == item.id }) {
             items[index].isChecked.toggle()
         }
-    }
-
-    func addItem() {
-        items.append(ChecklistItem(title: "New Item", isChecked: false, sectionTitle: "Misc"))
     }
 }
 
