@@ -60,10 +60,12 @@ struct QuizView: View {
                 .navigationDestination(for: String.self) { destination in
                     if destination == "Hawaii" {
                         PackingListView()
-
+                    } else if destination == "Iceland" {
+                        ExtraView1()
                     } else {
                         NextQuestionView(destination: destination)
                     }
+
                 }
 
             }
