@@ -1,18 +1,49 @@
 //
-//  AboutMeView.swift
-//  Bagged.
+//  ContentView.swift
+//  stemsters
 //
-//  Created by Charlotte Hwang on 7/29/25.
+//  Created by Aanya Jain on 7/22/25.
 //
 
 import SwiftUI
 
 struct AboutMeView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+   var body: some View {
+           ZStack {
+               Color(.systemPurple)
+                   .ignoresSafeArea()
+       
+           VStack(alignment: .leading, spacing: 20.0) {
+               Image("Charlotte")
+                   .resizable()
+                   .aspectRatio(contentMode: .fill)
+                   .frame(width: 80, height: 80)
+                   //.cornerRadius(20)
+                   //.padding(1)
+                   .background(Rectangle() .foregroundColor(.white))
+                   .cornerRadius(20)
+                   //.padding(50)
+               HStack(spacing: 20.0) {
+                   Text("Charlotte Hwang")
+                       .font(.title)
+                       .fontWeight(.bold)
+               }
+               Spacer()
+            }
+           .padding()
+           .background(Color.white)
+            .cornerRadius(15)
+            .shadow(radius:15)
+            .padding()
+               
+            Spacer()
+        }
     }
 }
+      
+
+
 
 #Preview {
-    AboutMeView()
+   ContentView()
 }
