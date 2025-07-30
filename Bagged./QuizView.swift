@@ -35,7 +35,8 @@ struct QuizView: View {
                                     .padding()
                                     .background(selectedDestination == destination ? Color.orange.opacity(0.7) : Color.gray.opacity(0.3))
                                     .foregroundColor(selectedDestination == destination ? .white : .primary)
-                                    .cornerRadius(12)
+                                    .cornerRadius(15)
+                                    .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
                             }
                         }
                     }
@@ -50,7 +51,8 @@ struct QuizView: View {
                             .padding()
                             .background(selectedDestination.isEmpty ? Color.blue.opacity(0.4) : Color.blue.opacity(0.8))
                             .foregroundColor(.white)
-                            .cornerRadius(12)
+                            .cornerRadius(15)
+                            .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
                     }
                     .disabled(selectedDestination.isEmpty)
                 }
@@ -85,7 +87,8 @@ struct QuizView: View {
                             .padding()
                             .background(Color.blue.opacity(0.8))
                             .foregroundColor(.white)
-                            .cornerRadius(12)
+                            .cornerRadius(15)
+                            .shadow(color: .black.opacity(0.3), radius: 5, x: 0, y: 5)
                 }
             }
             .padding()
