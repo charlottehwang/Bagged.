@@ -22,7 +22,7 @@ struct AboutMeView: View {
                         Image("Charlotte")
                             .resizable()
                             .aspectRatio(contentMode: .fill)
-                            .frame(width: 130, height: 130)
+                            .frame(width: 130, height: 120)
                         //.cornerRadius(20)
                         //.padding(1)
                             .background(Rectangle() .foregroundColor(.white))
