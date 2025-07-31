@@ -1,18 +1,75 @@
 //
-//  AboutMeView.swift
-//  Bagged.
+//  ContentView.swift
+//  stemsters
 //
-//  Created by Charlotte Hwang on 7/29/25.
+//  Created by Aanya Jain on 7/22/25.
 //
 
 import SwiftUI
 
 struct AboutMeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(.systemPurple)
+                .ignoresSafeArea()
+            
+            VStack {
+                VStack(alignment: .leading, spacing: 20.0) {
+                    
+                    HStack(spacing: 20.0) {
+                        Image("Charlotte")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 130, height: 130)
+                        //.cornerRadius(20)
+                        //.padding(1)
+                            .background(Rectangle() .foregroundColor(.white))
+                            .cornerRadius(20)
+                        Text("Charlotte Hwang")
+                            .font(.title)
+                            .fontWeight(.bold)
+                        Spacer()
+                    }
+                //    Spacer()
+                    
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(15)
+                .shadow(radius:15)
+                .padding()
+              
+                VStack(alignment: .leading, spacing: 20.0) {
+                    
+                    HStack(spacing: 20.0) {
+                        Image("aanya")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 130, height: 130)
+                        //.cornerRadius(20)
+                        //.padding(1)
+                            .background(Rectangle() .foregroundColor(.white))
+                            .cornerRadius(20)
+                        Text("Aanya Jain")
+                            .font(.title)
+                            .fontWeight(.bold)
+                        Spacer()
+                    }
+                //    Spacer()
+                    
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(15)
+                .shadow(radius:15)
+                .padding()
+            }
+            
+            Spacer()
+        }
     }
 }
-
 #Preview {
-    AboutMeView()
+    ContentView()
 }
+
