@@ -62,6 +62,10 @@ struct QuizView: View {
                         PackingListView()
                     } else if destination == "Iceland" {
                         ExtraView1()
+                    } else if destination == "Japan" {
+                        ExtraView2()
+                    } else if destination == "France" {
+                        ExtraView3()
                     } else {
                         NextQuestionView(destination: destination)
                     }
