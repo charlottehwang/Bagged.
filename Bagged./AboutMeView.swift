@@ -15,8 +15,9 @@ struct AboutMeView: View {
                 .ignoresSafeArea()
             
             VStack {
-                VStack(alignment: .leading, spacing: 20.0) {
-                    
+                VStack(alignment: .leading, spacing: 20.0)
+                   {
+                       
                     HStack(spacing: 20.0) {
                         Image("Charlotte")
                             .resizable()
@@ -55,26 +56,69 @@ struct AboutMeView: View {
                             .font(.title)
                             .fontWeight(.bold)
                         Spacer()
-                    }
-                    //    Spacer()
-                    
-                }
+                        
+                          }
                 .padding()
                 .background(Color.white)
                 .cornerRadius(15)
                 .shadow(radius:15)
                 .padding()
-            }
+                            //    Spacer()     VStack(alignment: .leading, spacing: 20.0) {
             
+                    HStack(spacing: 20.0) {
+                        Image("ameya")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 130, height: 130)
+                        //.cornerRadius(20)
+                        //.padding(1)
+                            .background(Rectangle() .foregroundColor(.white))
+                            .cornerRadius(20)
+                        Text("Ameya Banjara")
+                            .font(.title)
+                            .fontWeight(.bold)
+                        Spacer()
+                    }
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(15)
+                    .shadow(radius:15)
+                    .padding()
             
-          
+            VStack(alignment: .leading, spacing: 20.0) {
+                
+                HStack(spacing: 20.0) {
+                    Image("reese")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 130, height: 130)
+                    //.cornerRadius(20)
+                    //.padding(1)
+                        .background(Rectangle() .foregroundColor(.white))
+                        .cornerRadius(20)
+                    Text("Reese Walther")
+                        .font(.title)
+                        .fontWeight(.bold)
+                    Spacer()
                 }
             }
+            .padding()
+            .background(Color.white)
+            .cornerRadius(15)
+            .shadow(radius:15)
+            .padding()
         }
-
+        
+        
+    }
+}
+            
+        }
+    
+}
 
 
 #Preview {
-   ContentView()
+   AboutMeView()
 }
 
