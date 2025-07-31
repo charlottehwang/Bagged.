@@ -1,4 +1,3 @@
-//
 //  PackingListView.swift
 //  Bagged.
 //
@@ -101,4 +100,3 @@ struct PackingListView: View {
 #Preview {
     PackingListView()
 }
-
