@@ -11,7 +11,11 @@ struct AboutMeView: View {
     
     var body: some View {
         ZStack {
-            Color(.systemPurple)
+            LinearGradient(
+                gradient: Gradient(colors: [Color.orange.opacity(0.8), Color.pink.opacity(0.7)]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
                 .ignoresSafeArea()
             
             VStack {
