@@ -25,16 +25,16 @@ let extraPackingData: [String: [String]] = [
     "Toiletries 🧼": [
         "Toothbrush", "Toothpaste", "Hairbrush or comb", "Shampoo & conditioner", "Body Wash","Deodorant", "Razor", "Moisturizer", "Bug spray", "Hair ties / clips"
     ],
-    "Outerwear ": [
+    "Outerwear 🧥": [
         "Waterproof and windproof jacket", "Lightweight insulated jacket", "Waterproof rain pants", "Beanie or wool hat", "Waterproof and insulated gloves"
     ],
-    "Adventure gear 🥾": [
+    "Adventure gear 🌋": [
         "Daypack", "Reusable water bottle", "Swimsuit", "Extra bag for wet clothes", "Flashlight", "Headlamp", "Binoculars", "Protein bars & snacks"
     ],
-    "Footwear": [
+    "Footwear 🥾": [
         "Waterproof hiking boots", "Casual shoes / sneakers for city", "Sandals for hot springs / hotel"
     ],
-    "Electronics": [
+    "Electronics 🔌": [
         "Universal power adapter (Iceland uses Type F plug)", "Phone and charger", "Power bank", "Camera and SD Cards", "Waterproof phoen case (if visitng waterfalls or hot springs)"
     ]
 ]
@@ -75,7 +75,7 @@ struct ExtraView1: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal)
-                .navigationTitle("Extra Checklist")
+                .navigationTitle("Iceland Packing List")
             }
         }
     }
